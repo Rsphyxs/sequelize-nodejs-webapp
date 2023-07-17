@@ -12,9 +12,6 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-        last_login: {
-            type: DataTypes.DATE,
         }
     }, {
         createdAt: 'created_at',
