@@ -1,23 +1,19 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const User = sequelize.define("user", {
+    const Token = sequelize.define("refresh_token", {
         username: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        name: {
+        token: {
             type: DataTypes.STRING,
             allowNull: false
         }
     }, {
         createdAt: 'created_at',
-        updatedAt: 'updated_at',
+        updatedAt: false
     });
+    Token.removeAttribute('id');
 
-    return User
-
+    return Token
 }
