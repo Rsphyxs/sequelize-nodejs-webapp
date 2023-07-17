@@ -6,8 +6,9 @@ const router = require('express').Router()
 
 
 // use routers
-router.post('/addUser', userController.addUser)
-router.get('/Tes', userController.Tes)
+router.post('/register', userController.register)
+router.get('/login', userController.login)
+router.post('/update', userController.update)
 
 
 module.exports = router
