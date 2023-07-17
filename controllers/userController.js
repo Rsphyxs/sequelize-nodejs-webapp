@@ -211,7 +211,7 @@ const update = async (req, res) => {
               res
                 .status(200)
                 .json({
-                  Status: "Failed!",
+                  Status: "Successful!",
                   Message: "User Updated!",
                 })
                 .send();
@@ -329,7 +329,10 @@ const token = async (req, res) => {
             } else {
               newToken = jwt.sign(
                 { username: username },
-                process.env.ACCESS_TOKEN_SECRET
+                process.env.ACCESS_TOKEN_SECRET,
+                {
+                  expiresIn: "30s",
+                }
               );
               res
                 .status(200)
