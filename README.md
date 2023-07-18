@@ -3,7 +3,7 @@
 Simple secure CRUD program using Node.js, Express.js, and Sequelize ORM.
 
 ## Available Feature
-1. Register User
+1. Register User (User that just registered also considered login)
 2. Login User
 3. Update User
 4. Logout User
@@ -22,10 +22,12 @@ Simple secure CRUD program using Node.js, Express.js, and Sequelize ORM.
 
 
 ## How To Run
-### Memasukkan File database.sql ke postgres
+### Prepare the database locally
 1. Copy all query from `database.sql` and run it in local psql
 
 ### Running Backend Service
 2. Direct folder to where `server.js` is, then run `nodemon server.js` or `node server.js` in command prompt or power shell.
 
+### Test API
+3. Import the postman collection API to start using the service with the available route
 </br>
